@@ -35,7 +35,7 @@ function App() {
 
   return (
     <Router>
-      <div className='pb-20'>
+      <div className='mainpage pb-20'>
         {dados ? (
           <div>
             <Routes>
@@ -46,13 +46,13 @@ function App() {
               {currentPage > 1 && 
               <Link to={`/${currentPage - 1}`} onClick={handlePreviousPage}>
                 <button pill>
-                  <ImPrevious className='size-10 mr-1 bg-white rounded-full'></ImPrevious>
+                  <ImPrevious className='size-10 mr-1 bg-blue-600 rounded-full'></ImPrevious>
                 </button>
               </Link>}
               {dados.next && 
               <Link to={`/${currentPage + 1}`} onClick={handleNextPage}>
                 <button pill>
-                  <ImNext className='size-10 bg-white rounded-full'></ImNext>
+                  <ImNext className='size-10 bg-blue-600 rounded-full'></ImNext>
                 </button>
               </Link>}
             </div>
@@ -60,7 +60,7 @@ function App() {
         ) : (
           <div className="flex flex-col justify-center items-center h-screen">
             <Spinner aria-label="Center-aligned spinner example" size="xl" color="purple"/>
-            <div className="text-4xl">Carregando</div>
+            <div className="text-4xl text-white">Carregando</div>
           </div>
         )}
       </div>
